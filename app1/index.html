@@ -18,6 +18,7 @@
       height: 100%;
       opacity: 0;
       animation: fade 5s infinite;
+      z-index: 1;
     }
 
     @keyframes fade {
@@ -41,6 +42,7 @@
       left: 0;
       width: 100%;
       height: 100%;
+      z-index: 2;
     }
 
     .overlay {
@@ -88,8 +90,6 @@
     <img class="background-image" src="images/image4.jpg">
     <img class="background-image" src="images/image5.jpg">
     <!-- 更多背景图片 -->
-  </div>
-
   <div class="login-container">
     <div class="overlay">
       <div class="circle-button"></div>
@@ -100,7 +100,7 @@
       </form>
     </div>
   </div>
-
+</div>
   <script>
     // 在这里添加 JavaScript 代码，处理登录逻辑和发送登录请求
   </script>
