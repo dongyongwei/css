@@ -1,108 +1,111 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>H5手机登录页面</title>
-  <style>
-    .background-container {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App1</title>
+    <style>
+      .background-container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
 
-    .background-image {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      animation: fade 5s infinite;
-      z-index: 1;
-    }
-
-    @keyframes fade {
-      0% {
+      .background-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         opacity: 0;
+        animation: fade 5s infinite;
+        z-index: 1;
       }
-      20% {
-        opacity: 1;
+
+      @keyframes fade {
+        0% {
+          opacity: 0;
+        }
+        20% {
+          opacity: 1;
+        }
+        80% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
       }
-      80% {
-        opacity: 1;
+
+      .login-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
       }
-      100% {
-        opacity: 0;
+
+      .overlay {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
       }
-    }
 
-    .login-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 2;
-    }
+      .circle-button {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #ffffff;
+      }
 
-    .overlay {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
+      .login-form {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-    .circle-button {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      background-color: #ffffff;
-    }
+      .login-form input {
+        width: 200px;
+        height: 30px;
+        margin-bottom: 10px;
+      }
 
-    .login-form {
-      margin-top: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .login-form input {
-      width: 200px;
-      height: 30px;
-      margin-bottom: 10px;
-    }
-
-    .login-form button {
-      width: 100px;
-      height: 30px;
-    }
-  </style>
-</head>
-<body>
-  <div class="background-container">
-    <img class="background-image" src="images/image1.jpg">
-    <img class="background-image" src="images/image2.jpg">
-    <img class="background-image" src="images/image3.jpg">
-    <img class="background-image" src="images/image4.jpg">
-    <img class="background-image" src="images/image5.jpg">
-    <!-- 更多背景图片 -->
-  <div class="login-container">
-    <div class="overlay">
-      <div class="circle-button"></div>
-      <form class="login-form">
-        <input type="text" placeholder="用户名">
-        <input type="password" placeholder="密码">
-        <button type="submit">登录</button>
-      </form>
+      .login-form button {
+        width: 100px;
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background-container">
+      <img class="background-image" src="images/image1.jpg" />
+      <img class="background-image" src="images/image2.jpg" />
+      <img class="background-image" src="images/image3.jpg" />
+      <img class="background-image" src="images/image4.jpg" />
+      <img class="background-image" src="images/image5.jpg" />
+      <!-- 更多背景图片 -->
+      <div class="login-container">
+        <div class="overlay">
+          <div class="circle-button"></div>
+          <form class="login-form">
+            <input type="text" placeholder="用户名" />
+            <input type="password" placeholder="密码" />
+            <button type="submit">登录</button>
+          </form>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-  <script>
-    // 在这里添加 JavaScript 代码，处理登录逻辑和发送登录请求
-  </script>
-</body>
+    <script>
+      // 在这里添加 JavaScript 代码，处理登录逻辑和发送登录请求
+    </script>
+  </body>
 </html>
